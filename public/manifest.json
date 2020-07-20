@@ -1,0 +1,8 @@
+{
+  "short_name": "Star Wars wiki",
+  "name": "Star Wars planet encyclopedia",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
