@@ -8,46 +8,47 @@ import GlobalStyle from "../theme/GlobalStyle";
 const MoviesList = () => {
   const Wrapper = styled.div`
     position: absolute;
-    left: 205px;
+    left: 50%;
     top: 96px;
+    transform: translateX(-50%);
     width: ${(props) => (props.width > 480 ? "790px" : "343px")};
-    height: 521px;
+    min-height: 521px;
     border-radius: 8px;
     background-color: #e0e6ee;
   `;
 
   const LogoWrapper = styled.div`
-    width: 100%;
-    padding: 32px 237px 16px 237px;
+    width:  "100%";
+    padding: ${(props) => (props.width > 480 ? "32px 237px 16px 237px;" : "35px 60px 15px")};
   `;
   const List = styled.ul`
     list-style: none;
   `;
   const ListItem = styled.li`
-    width: 730px;
-    height: 48px;
     margin: 0 30px 16px 30px;
-    padding: 0 15px;
+    display: flex;
+    justyfy-content: center;
+    alignItems: center;
+    min-height: 48px;
+    flex-direction: column;
     box-shadow: 0px 2px 1px rgba(196, 196, 196, 0.2);
     border-radius: 4px;
     background: #ffffff;
-
-    display: flex;
-    justify-content: space-between;
   `;
-  const width = window.innerWidth;
+  const width = window.screen.width;
+  console.log('cl', width)
   // const planets = data.data.films.map(film => data.data.planets.map(planet => planet.filmConnection.films.filter(item => item.id === film.id)))
 
   return (
     <Wrapper width={width}>
       <>
         <GlobalStyle />
-        <LogoWrapper>
-          <img src={Logo} alt="logo" />
+        <LogoWrapper width={width}>
+          <img src={Logo} alt="logo" width={width > 480 ? "100%" : "222px"} />
         </LogoWrapper>
         <List>
           {data.data.films.map((item) => (
-            <ListItem>
+            <ListItem width={width}>
               <MovieItem
                 key={item.id}
                 data={data.data.planets}

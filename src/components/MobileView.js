@@ -1,42 +1,57 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap"
+import styled from "styled-components";
+
 
 const MobileView = (props) => {
+  const Wrapper = styled.div`
+  background-color: ${(props) => (props.index % 2 !== 0 ? "rgba(229, 229, 229, 0.5)" : null)};
+  padding: 21px 0;
+`;
+  const MobileRow = styled.div`
+  font-size: 14px;
+  display: flex;
+  padding: 0 10px
+`;
 
+  const MobileCol = styled.div`
+font-size: 14px;
+width: 50%;
+padding: 5px 48px 5px 0px;
+`;
   return (
 
     props.planetData.map((item, index) => (
-      <div style={index % 2 !== 0 ? { backgroundColor: "yellow" } : null}>
-        <Row>
-          <Col xs={6}>Planet name</Col>
-          <Col xs={6}>{item.name}</Col>
-        </Row>
-        <Row>
-          <Col xs={6}>Rotation period</Col>
-          <Col xs={6}>{item.rotationPeriod}</Col>
-        </Row>
-        <Row>
-          <Col xs={6}>Orbital period</Col>
-          <Col xs={6}>{item.orbitalPeriod}</Col>
-        </Row>
-        <Row>
-          <Col xs={6}>Diameter</Col>
-          <Col xs={6}>{item.diameter}</Col>
-        </Row>
-        <Row>
-          <Col xs={6}>Climate</Col>
-          <Col xs={6}>{item.climate}</Col>
-        </Row>
-        <Row>
-          <Col xs={6}>Surface water</Col>
-          <Col xs={6}>{item.surfaceWater}</Col>
-        </Row>
-        <Row>
-          <Col xs={6}>Population</Col>
-          <Col xs={6}>{item.population}</Col>
+      <Wrapper index={index}  >
+        <MobileRow>
+          <MobileCol xs={6}>Planet name</MobileCol>
+          <MobileCol xs={6}>{item.name}</MobileCol>
+        </MobileRow>
+        <MobileRow>
+          <MobileCol xs={6}>Rotation period</MobileCol>
+          <MobileCol xs={6}>{item.rotationPeriod}</MobileCol>
+        </MobileRow>
+        <MobileRow>
+          <MobileCol xs={6}>Orbital period</MobileCol>
+          <MobileCol xs={6}>{item.orbitalPeriod}</MobileCol>
+        </MobileRow>
+        <MobileRow>
+          <MobileCol xs={6}>Diameter</MobileCol>
+          <MobileCol xs={6}>{item.diameter}</MobileCol>
+        </MobileRow>
+        <MobileRow>
+          <MobileCol xs={6}>Climate</MobileCol>
+          <MobileCol xs={6}>{item.climate}</MobileCol>
+        </MobileRow>
+        <MobileRow>
+          <MobileCol xs={6}>Surface water</MobileCol>
+          <MobileCol xs={6}>{item.surfaceWater}</MobileCol>
+        </MobileRow>
+        <MobileRow>
+          <MobileCol xs={6}>Population</MobileCol>
+          <MobileCol xs={6}>{item.population}</MobileCol>
 
-        </Row>
-      </div>)
+        </MobileRow>
+      </Wrapper>)
     )
 
 
