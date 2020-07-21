@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
 const MobileView = (props) => {
   const Wrapper = styled.div`
   background-color: ${(props) => (props.index % 2 !== 0 ? "rgba(229, 229, 229, 0.5)" : null)};
@@ -49,12 +48,9 @@ padding: 5px 48px 5px 0px;
         <MobileRow>
           <MobileCol xs={6}>Population</MobileCol>
           <MobileCol xs={6}>{item.population}</MobileCol>
-
         </MobileRow>
       </Wrapper>)
     )
-
-
   )
 }
 

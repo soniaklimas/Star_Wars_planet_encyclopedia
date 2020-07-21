@@ -4,7 +4,6 @@ import ArrowClose from "../assets/ARROW CLOSE.svg";
 import ArrowOpen from "../assets/ARROW OPEN.svg";
 import MovieContent from "./MovieContent";
 import data from "../data/data";
-// import { Collapse } from "react-bootstrap";
 
 const Title = styled.h5`
   font-weight: bold;
@@ -53,20 +52,12 @@ const MovieItem = (props) => {
 
         />
       </div>
-      {/* <div style={isOpen ? style.collapsed : style.expanded}> */}
       {isOpen ?
         <Wrapper>
           <MovieContent
             planets={rightPlanets}
 
           /></Wrapper> : null}
-      {/* </div> */}
-
-      {/* <Collapse in={open}>
-        <div id="example-collapse-text">
-          <MovieContent planets={rightPlanets} />
-        </div>
-      </Collapse> */}
     </>
   );
 };

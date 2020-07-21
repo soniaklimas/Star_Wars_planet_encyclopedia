@@ -36,8 +36,6 @@ const MoviesList = () => {
     background: #ffffff;
   `;
   const width = window.screen.width;
-  console.log('cl', width)
-  // const planets = data.data.films.map(film => data.data.planets.map(planet => planet.filmConnection.films.filter(item => item.id === film.id)))
 
   return (
     <Wrapper width={width}>
@@ -56,19 +54,6 @@ const MoviesList = () => {
                 title={item.title}
               />
             </ListItem>
-            // <ListGroup>
-            //   <ListGroup.Item
-            //     className="m-2 px-3"
-            //     className={width < 480 ? "px-0" : ""}
-            //   >
-            //     <MovieItem
-            //       key={item.id}
-            //       data={data.data.planets}
-            //       id={item.id}
-            //       title={item.title}
-            //     />
-            //   </ListGroup.Item>
-            // </ListGroup>
           ))}
         </List>
       </>

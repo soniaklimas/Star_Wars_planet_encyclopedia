@@ -1,18 +1,25 @@
 import React from "react";
 import DataTable from 'react-data-table-component';
 import MobileView from '../components/MobileView';
-import { FaSort } from "react-icons/fa";
+
 const MovieContent = (props) => {
-  const sortIcon = <FaSort />;
   const customStyles = {
+    headRow: {
+      style: {
+        minHeight: '56px',
+        borderBottomWidth: '1px',
+        width: '698px',
+        margin: '0 auto'
+      }
+    },
     rows: {
       style: {
         height: "60px",
         fontSize: "12px",
         boxShadow: "0px 2px 1px rgba(196, 196, 196, 0.2)",
-
-
-
+        '&:not(:last-of-type)': {
+          borderBottomWidth: '0px',
+        }
       }
     },
     row: {
@@ -23,8 +30,8 @@ const MovieContent = (props) => {
     },
     headCells: {
       style: {
-        paddingLeft: '8px',
-        paddingRight: '8px',
+        paddingLeft: '7px',
+        paddingRight: '7px',
       },
     },
     cells: {
@@ -65,7 +72,6 @@ const MovieContent = (props) => {
         noHeader={true}
         customStyles={customStyles}
         responsive={false}
-        fontIcon={sortIcon}
         data={props.planets} /> : <MobileView planetData={props.planets} />
   )
 }
