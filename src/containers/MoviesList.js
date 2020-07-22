@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../assets/LOGO.svg";
 import data from "../data/data.json";
-import MovieItem from "../components/MovieItem";
 import GlobalStyle from "../theme/GlobalStyle";
+import Logo from "../assets/LOGO.svg";
+import MovieItem from "../components/MovieItem";
 
 const MoviesList = () => {
   const Wrapper = styled.div`
@@ -18,23 +18,25 @@ const MoviesList = () => {
   `;
 
   const LogoWrapper = styled.div`
-    width:  "100%";
-    padding: ${(props) => (props.width > 480 ? "32px 237px 16px 237px;" : "35px 60px 15px")};
+    width: "100%";
+    padding: ${(props) =>
+      props.width > 480 ? "32px 237px 16px 237px;" : "35px 60px 15px"};
   `;
+
   const List = styled.ul`
     list-style: none;
   `;
+
   const ListItem = styled.li`
-    margin: 0 30px 16px 30px;
     display: flex;
-    justyfy-content: center;
-    alignItems: center;
-    min-height: 48px;
     flex-direction: column;
+    min-height: 48px;
+    margin: 0 30px 16px 30px;
     box-shadow: 0px 2px 1px rgba(196, 196, 196, 0.2);
     border-radius: 4px;
     background: #ffffff;
   `;
+
   const width = window.screen.width;
 
   return (

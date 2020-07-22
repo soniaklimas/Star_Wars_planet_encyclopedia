@@ -6,11 +6,12 @@ const GlobalStyle = createGlobalStyle`
  
 }
 body{
-font-family: 'Barlow', sans-serif
+font-family: 'Barlow', sans-serif;
 margin: 0
 }
 h5{
-  margin-bottom: 0
+  margin-bottom: 0;
+  font-family: 'Barlow', sans-serif
 }
 `;
 
